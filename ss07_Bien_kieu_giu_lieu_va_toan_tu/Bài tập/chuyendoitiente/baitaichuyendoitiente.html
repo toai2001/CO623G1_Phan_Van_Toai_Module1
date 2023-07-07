@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+
+
+</head>
+<body>
+    <label for="Amount">Amount </label>
+        <input type="text "id="Amount">
+        <br>
+
+    <label for="fromcurrency">from curecy</label>
+    <select type="select" id="fromcurrency">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option></select>
+
+
+    <label for="tocurrency">To Currency</label>
+    <select type="select" id="tocurrency">
+        <option value="USD">VND</option>
+        <option value="VND">USD</option>
+    </select>
+    <br>
+    <input type="submit" value="click" onclick="convertMoney()">
+    <p id="result"></p>
+
+    <script src="baitapchuyendoitiente.js"></script>
+
+</body>
+</html>
