@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Thuế thu nhập cá nhân</h1>
+<label for="thuethunhapcanhan">Số tiền</label>
+<input type="number" id="thuethunhapcanhan" name="thuethunhapcanhan">
+<br>
+<br>
+<button onclick="tinhtien()">Tính tiền</button>
+<br>
+<br>
+<p id="tien"></p>
+<script>
+  function tinhtien() {
+    let tien = parseFloat(document.getElementById('thuethunhapcanhan').value)
+    if (tien > 60000000 && tien < 120000000){
+      document.getElementById('tien').innerHTML='Số tiền cần đóng thuế 1 năm là : '+ tien *10 / 100
+    }
+    else if (tien > 120000000 && tien < 216000000){
+      document.getElementById('tien').innerHTML='Số tiền cần đóng thuế 1 năm là : '+ tien *15 / 100
+    }
+    else  if (tien>216000000  && tien < 384000000){
+      document.getElementById('tien').innerHTML='Số tiền cần đóng thuế 1 năm là : '+ tien *20 / 100
+    }
+    else if (tien > 384000000 && tien < 624000000){
+      document.getElementById('tien').innerHTML='Số tiền cần đóng thuế 1 năm là : '+ tien *25 / 100
+    }
+    else if (tien > 624000000 && tien < 960000000){
+      document.getElementById('tien').innerHTML='Số tiền cần đóng thuế 1 năm là : '+ tien *30 / 100
+    }
+    else if (tien > 960000000){
+      document.getElementById('tien').innerHTML='Số tiền cần đóng thuế 1 năm là : '+ tien *35 / 100
+    }
+   else {
+     document.getElementById('tien').innerHTML='Không cần đóng thuế'
+    }
+
+  }
+</script>
+</body>
+</html>

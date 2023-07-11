@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let thang = parseInt(prompt('Nhập số tháng vay'))
+  let  tien = parseInt(prompt('Nhập số tiền vay'))
+  if (thang < 6) {
+    let tienLai = tien * 0.08;
+    alert('Số tiền lãi:' + tienLai)
+  }
+  else if (thang >= 6 && thang < 12) {
+    let tienLai = tien * 0.07
+    alert("Số tiền lãi:" + tienLai)
+  }
+  else if (thang >= 12 && thang < 18) {
+    let tienLai = tien * 0.06
+    alert("Số tiền lãi:" + tienLai)
+  }
+  else if (thang >= 18) {
+    let tienLai = tien * 0.05
+    alert("Số tiền lãi:" + tienLai)
+  }
+</script>
+</body>
+</html>

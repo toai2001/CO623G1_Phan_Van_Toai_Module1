@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Doanh số bán hàng</h1>
+<label for="doanhso">Doanh Số Bán hoa Hồng</label>
+<input type="number"id="doanhso"name="doanhso">
+<br>
+<br>
+<button
+  onclick="tinhhoahong()">Tính Toán
+</button>
+<br>
+<br>
+<p id="hoahong"></p>
+<script>
+  function tinhhoahong() {
+    var ds = parseFloat(document.getElementById('doanhso').value);
+    var hh =0
+    if (ds <= 1000){
+      hh = 0.05*ds
+    }
+
+    else if (ds <= 5000){
+      hh = 0.07 * ds
+    }
+    else if (ds <= 10000){
+      hh = 0.1 * ds
+    }
+    else {
+      hh = 0.12 *ds
+    }
+    document.getElementById('hoahong').innerHTML='Hoa Hồng nhận Được'+hh
+
+  }
+</script>
+
+</body>
+</html>

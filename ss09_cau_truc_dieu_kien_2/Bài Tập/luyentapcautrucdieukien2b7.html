@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập a')
+    let b = + prompt('Nhập b')
+    let c = +prompt('Nhập c')
+    let delta = b ** 2 - 4 * a * c
+    let nghiemkep = -b/2*a*c
+    let x1 = (-b + Math.sqrt(delta)) / (2*a)
+    let x2 = (-b - Math.sqrt(delta)) / (2*a)
+    if (delta < 0){
+        alert('Phương trình vô nghiệm')
+    }
+    else if (delta = 0){
+        alert('phươn trình có nghiệm kép :'+ 'X1 = X2 =' + nghiemkep )
+    }
+    else {
+        alert( x1)
+        alert(x2)
+    }
+
+</script>
+
+</body>
+</html>
