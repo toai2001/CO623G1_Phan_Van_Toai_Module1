@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let tiengui=+prompt('Nhập số tiền gửi')
+  let lai=+prompt('Số lãi %')
+  let thang=+prompt('Số tháng gửi')
+  let tienlai=0;
+  for (let i = 0; i < thang; i++) {
+    tienlai=tiengui*(lai/100)
+    tiengui=tienlai+tiengui
+  }
+  document.write('Tổng cộng số tiền bạn nhận lại :'+ tiengui +'VNĐ')
+</script>
+</body>
+</html>
