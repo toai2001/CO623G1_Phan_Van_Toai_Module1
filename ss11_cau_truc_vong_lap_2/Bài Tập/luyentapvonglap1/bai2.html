@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  let nhietdo
+  do {
+    nhietdo=+prompt('Vui lòng nhập nhiệt độ :')
+    if (nhietdo > 100){
+      alert('Vui lòng giảm nhiệt độ:(')
+    }
+    else if (nhietdo<20){
+      alert('Vui Lòng Tăng Nhiệt Độ')
+    }
+    else {
+      alert('ok')
+    }
+  }while (nhietdo>100||nhietdo<20)
+</script>
 </body>
 </html>

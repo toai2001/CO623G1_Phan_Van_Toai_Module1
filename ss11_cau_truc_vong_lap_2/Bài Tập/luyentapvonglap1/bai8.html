@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let max=+prompt('Nhập số lớn nhất')
+  let min=+prompt('Nhập số bé nhất')
+  let random = Math.round(Math.random() * (max-min)+max)
+
+  let luot=1
+  debugger
+  do {
+      let sodona =+prompt('Nhập số bạn đoán :')
+      if (sodona===random){
+          alert('Bạn đã đoán chính xác')
+          break
+
+      }else if (sodona<random){
+          alert("Bạn nhập số lớn hơn, Số lần còn lại là : " + (3 -luot) + " lần đoán. ")
+      }else if (sodona>random){
+          alert("Bạn nhập số lớn hơn, Số lần còn lại là : " + (3 -luot) + " lần đoán. ")
+      }else {
+          alert('Bạn đã hết số lượt chơi')
+      }luot++
+  }while (luot<=3)
+
+</script>
+</body>
+</html>
