@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  let so = +prompt('Nhập số bạn muốn:')
+  let numbers =so.toString()
+  let kq= [numbers[0]]
+  for (let i = 0; i <numbers.length  ; i++) {
+    if ((numbers[i-1])% 2=== 0 && numbers[i]%2===0)
+    {
+      kq.push('-',numbers[i])
+  }else {
+
+
+      kq.push(numbers[i])
+    }document.write(kq.join(' '))
+  }
+
+</script>
 </body>
 </html>
