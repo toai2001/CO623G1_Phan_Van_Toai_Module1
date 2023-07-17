@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="dich"> Từ cần tra dịch</label>
+<input type="text"name="english"id="dich">
+<br>
+<br>
+<button onclick="dich()"type="submit" >Dịch </button>
+<p id="result"></p>
+<br>
+<br>
+<h5>Chỉ nhập những từ đơn giản như: apple, banana, orange, grape, melon......    </h5>
+<script>
+    function dich() {
+        let english=['apple','banana','orage','grape','melon'];
+        let vietnamese=['Táo','Chuối','Cam','Nho','Dưa']
+        let dich= document.getElementById('dich').value;
+        for (let i = 0; i < english.length; i++) {
+            if (dich === english[i]){
+                alert(english[i] + ' là ' + vietnamese[i]);
+            }
+            }
+        for (let j = 0; j < vietnamese.length; j++) {
+            if (dich === vietnamese[j]) {
+                alert(vietnamese[j] + ' là ' + english[j]);
+            }
+        }}
+
+
+
+
+</script>
+
+</body>
+</html>

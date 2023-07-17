@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let leigth =+prompt('Độ dài của dãy số ');
+  let number = [];
+  for (let i = 0; i < leigth; i++) {
+      number[i]=+prompt('Nhập giá trị của bạn');
+  }
+  let count =0
+  for (let i = 0; i < leigth; i++) {
+      if (number[i] >=10){
+          count++
+      }
+      
+  }
+  document.write('Có tổng cộng :' + count + ' số lớn hơn hoặc bằng 10 mà bạn vừa nhập vào')
+</script>
+</body>
+</html>

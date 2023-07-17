@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbera = ['1','2','3','4'];
+    let numberb = ['5','6','7','8'];
+    let number_b_a =numberb.concat(numbera);
+    document.write('Sau khi nỗi mảng b vào a :'+number_b_a+'<br>');
+    let leigth =+prompt('Độ dài của dãy số ');
+    let numberc = [];
+    for (let i = 0; i < leigth; i++) {
+        numberc[i] = +prompt('Nhập giá trị của bạn');
+    }
+    document.write('Mảng của bạn vừa nhập :'+ numberc+'<br>');
+    let numberc_b_a=numberc.concat(number_b_a);
+    document.write('Mảng nối từ b và a vào c là :' + numberc_b_a+'<br>');
+</script>
+</body>
+</html>

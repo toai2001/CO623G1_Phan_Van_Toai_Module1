@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let stt=0;
+  let leigth =+prompt('Độ dài của dãy số ');
+  let number = [];
+  for (let i = 0; i < leigth; i++) {
+    number[i] = +prompt('Nhập giá trị của bạn');
+  }
+
+  let max =0;
+  for (let i = 0; i < leigth; i++) {
+    if (max<number[i]){
+      max=number[i]
+      stt =i
+  }
+  }
+  document.write('Dãy số bạn vừa nhập là'+ number+'<br>');
+  document.write('Số lớn nhất trong dãy số bạn vừa nhập là '+max+ ' nằm ở vị trí ' + stt + ' trong dãy số của bạn');
+
+</script>
+</body>
+</html>

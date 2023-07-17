@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let stt=0;
+  let leigth =+prompt('Độ dài của dãy số ');
+  let number = [];
+  let sum = 0
+  for (let i = 0; i < leigth; i++) {
+    number[i] = +prompt('Nhập giá trị của bạn');
+    sum+=parseInt(number[i])
+  }
+
+
+  let max =0;
+  for (let i = 0; i < leigth; i++) {
+    if (max<number[i]){
+      max=number[i]
+
+    }
+  }
+  document.write('Dãy số bạn vừa nhập là'+ number+'<br>');
+  document.write('Giá trị lớn nhất của dãy số vừa nhập là '+ max+ '<br>' )
+  document.write('Trung bình của dãy số bạn vừa nhập là : ' + sum/leigth)
+
+</script>
+</body>
+</html>

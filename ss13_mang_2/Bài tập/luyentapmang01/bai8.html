@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let leigth =+prompt('Nhập độ dài chuỗi');
+    let number = [];
+    for (let i = 0; i < leigth; i++) {
+        number[i] = +prompt('Nhập giá trị của chuỗi:');
+    }
+    document.write('Dãy chuỗi khi chưa sắp xếp:'+number+'<br>');
+    number.sort((a , b) => b - a)
+    document.write('Dãy chuỗi đã sắp xếp :'+number);
+</script>
+</body>
+</html>
