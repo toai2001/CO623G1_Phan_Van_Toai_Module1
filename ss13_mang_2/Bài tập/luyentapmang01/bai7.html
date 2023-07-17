@@ -5,16 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+
+
 <script>
-    let numbers = [1,2,3,4,5,7,845,213,21];
-    let soNguyen = prompt("Nhập một số nguyên V bat kì để kiểm tra xem có trùng không")
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i]===soNguyen){
-            numbers.splice(i, 1);
-            numbers.push( 0 );
+    let arr = [1, 4, 5, 6, 7, 8, 9]
+    let inputV = +prompt("input number V")
+    let indexV = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (inputV === arr[i]) {
+            indexV = i;
+            break;
         }
     }
-    document.write("Chuỗi sau khi thực hiện là: "+numbers)
+    if (indexV!==-1){
+        for (let i = indexV; i < arr.length -1 ; i++) {
+            arr[i] = arr[(i+1)];
+        }
+        arr[arr.length-1] = 0;
+    }
+    document.write(arr);
 </script>
 </body>
 </html>

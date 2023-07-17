@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let str = prompt('Nhập 1 chuỗi kí tự :');
+  let arrstr = str.split(' ');
+ console.log(arrstr);
+  for (let i = 0; i < arrstr.length; i++) {
+    if (arrstr[i]=== '-'){
+      arrstr[i]= '-';
+    }
+
+  }
+  document.write(arrstr.join(' '))
+</script>
+</body>
+</html>
