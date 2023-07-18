@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<input type="number" id="number1">       Nhập số thứ nhất-->
+<!--<br>-->
+<!--<br>-->
+<!--<input type="number" id="number2">       Nhập số thứ 2-->
+<!--<br>-->
+<!--<br>-->
+
+<button onclick="sosanh()"> So Sánh 2 số</button>
+<script>
+
+    function sosanh() {
+    let so1 = +prompt('Nhập số thứ nhất');
+    let so2 = +prompt('Nhập số thứ hai');
+    let sum = so1+so2
+    if (so1 > so2){
+        alert('Giá trị số thứ nhất lớn hơn giá trị số thứ 2 ');
+    }
+    else {
+        alert('Tổng 2 số ' + sum)
+    }
+
+
+    }
+</script>
+</body>
+</html>

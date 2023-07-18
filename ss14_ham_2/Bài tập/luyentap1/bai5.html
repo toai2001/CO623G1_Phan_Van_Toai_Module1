@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="tracuu"> Tra cứu ngôi sao thuộc chòm sao nào </label>
+<input type="text" name="ngoisao" id="tracuu">
+<br>
+<br>
+<button onclick="tracuu()"type="submit"> Tra cứu</button>
+<p id="result"></p>
+<br>
+<br>
+<h2>Lưu ý :</h2>
+<h4>Chỉ tra cứu được những ngôi sao này Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus</h4>
+<script>
+    function tracuu() {
+        let sao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+        let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let tracuu = document.getElementById('tracuu').value;
+        for (let i = 0; i < sao.length; i++) {
+            if (tracuu === sao[i]){
+                alert(sao[i] + ' thuộc chòm sao ' + chomsao[i]);
+
+            }
+
+
+        }
+        if (tracuu!==sao[i]){
+            alert(tracuu +' không thuộc chòm sao nào');
+            
+        }
+
+
+
+    }
+</script>
+</body>
+</html>
