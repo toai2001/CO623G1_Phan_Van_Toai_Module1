@@ -9,7 +9,7 @@
 <input type="text" name="ngoisao" id="tracuu">
 <br>
 <br>
-<button onclick="tracuu()"type="submit"> Tra cứu</button>
+<button onclick="tracuu()" type="submit"> Tra cứu</button>
 <p id="result"></p>
 <br>
 <br>
@@ -17,19 +17,19 @@
 <h4>Chỉ tra cứu được những ngôi sao này Polaris, Aldebaran, Deneb, Vega, Altair, Dubhe và Regulus</h4>
 <script>
     function tracuu() {
-        let sao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+        let sao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
         let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
         let tracuu = document.getElementById('tracuu').value;
         for (let i = 0; i < sao.length; i++) {
-            if (tracuu === sao[i]){
+            if (tracuu === sao[i]) {
                 alert(sao[i] + ' thuộc chòm sao ' + chomsao[i]);
                 break;
-            }
-            else {
+            } else {
                 alert(tracuu + ' không thuộc chòm sao ' + chomsao [i]);
             }
         }
     }
+
 </script>
 </body>
 </html>

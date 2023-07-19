@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = +prompt(' Nhập 1 số kiểm tra phải số nguyên dương không :');
+  function check() {
+    let nguyenduong=number;
+    if (nguyenduong > 0){
+      alert(number + ' true');
+    }else if (nguyenduong < 0){
+      alert(number+ ' false')
+    }else {
+      alert(number + ' không phải số nguyên dương cũng không phải số nguyên âm');
+    }
+
+  }
+  check()
+</script>
+</body>
+</html>

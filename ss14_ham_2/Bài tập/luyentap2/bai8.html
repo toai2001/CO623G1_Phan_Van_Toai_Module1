@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function daonguoc() {
+    let leight=+prompt('Độ dài của số bạn cần đảo:');
+    let number=[];
+    for (let i = 0; i < leight; i++) {
+      number[i]=+prompt('Nhập số thứ '+ (i+1));
+    }
+    return number=number.reverse();
+    
+  }
+  document.write(daonguoc());
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [0,1];
+    document.write("Trước khi swap: " + arr + "<br>");
+    function swap(arr) {
+        let temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+    swap(arr);
+    document.write("Sau khi swap: " + arr + "<br>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let bankinh=+prompt('Nhập bán kính đường tròn:');
+    let PI= 3.14;
+    function  circleArea(bankinh) {
+        return bankinh * bankinh * PI;
+    }
+    function circumference(bankinh) {
+        return bankinh * 2 * PI;
+    }
+    let chuvi= circumference(bankinh);
+    let dientich=circleArea(bankinh);
+    document.write('Chu vi của bánh kính vừa nhập là:' + chuvi + '<br>' );
+    document.write('Diện tích bán kính vừa nhập là:' + dientich);
+
+</script>
+</body>
+</html>

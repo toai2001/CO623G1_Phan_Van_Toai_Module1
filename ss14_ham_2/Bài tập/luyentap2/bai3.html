@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = +prompt('Nhập số tính giai thừa:');
+  let count = 1;
+  function factorial(number) {
+    
+
+  for (let i = 1; i <=number ; i++) {
+    count *= i;
+
+  }
+  return count;
+  }
+  let result = factorial(number);
+  document.write(number+ '!' + ' = ' + result)
+</script>
+</body>
+</html>
