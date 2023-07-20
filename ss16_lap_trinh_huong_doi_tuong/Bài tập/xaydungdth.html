@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Mobile{
+    constructor(name, battery, draft, inbox,status ) {
+      this.name=name;
+      this.battery=battery;
+      this.draft=draft;
+      this.inbox=inbox;
+      this.status=status;
+    }
+    checkstatus(){
+      if (this.status){
+        console.log(this.status, 'The mobile is on');
+      }else {
+        console.log(this.status, ' The mobile is off');
+      }
+      this.battery--;
+    }
+    turnon(){
+      if (this.status){
+        console.log('Điện thoại đang được bật');
+      }else {
+        this.status =true;
+        this.battery--;
+      }
+    }
+    turnoff(){
+      if (this.status){
+        console.log('ĐIện thoại đang tắt');
+      }else {
+        this.status=true;
+      }
+    }
+    setbattery(newbattery){
+      this.battery=newbattery;
+    }
+
+  }
+</script>
+</body>
+</html>

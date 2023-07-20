@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // Tên, ngày tháng năm sinh, địa chỉ.
+  class Student {
+    constructor(name, birthday, address)  {
+      this.name = name;
+      this.birthday = birthday;
+      this.address = address;
+    }
+    // set / get
+    // setName(newName){
+    //   this.name = newName;
+    // }
+    //
+    // getName(){
+    //   return this.name;
+    // }
+
+    // toString() / getInformation()
+    getInformation(){
+      document.write("Tên: " + this.name + ", ngày sinh: " + this.birthday +
+              ", địa chỉ: " + this.address + "<br>");
+    }
+  }
+
+    let student1 = new Student("Quyền", "17/01/2002", "Đà Nẵng");
+  // student1.getInformation();
+  // student1.setName("Giang");
+  // student1.getInformation();
+  document.write(student1.getInformation());
+
+
+</script>
+</body>
+</html>
+</script>
+</body>
+</html>
