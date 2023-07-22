@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>di chuyen</title>
+</head>
+
+<body>
+<div id="game"></div>
+<script>
+    class Hero {
+        constructor(image, top, left, size) {
+
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+
+            this.direction = "right";
+        }
+        getHeroElement = function () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        moveRight() {
+            this.left += 100
+        }
+
+        moveLeft() {
+            this.left -= 100
+        }
+
+        moveDown() {
+            this.top += 100
+        }
+
+        moveUp() {
+            this.top -= 100
+        }
+
+        changeDirection() {
+            if (this.direction === "right") {
+                this.direction = "down";
+            } else if (this.direction === "down") {
+                this.direction = "left"
+            } else if (this.direction === "left") {
+                this.direction = "up"
+            } else if (this.direction === "up") {
+                this.direction = "right"
+            }
+        }
+    }
+    let hero = new Hero('hero.jpg', 10 , 10, 200);
+
+    function start() {
+        let width = window.innerWidth;
+        let height = window.innerHeight;
+        if (hero.direction === "right") {
+            hero.moveRight();
+            if (hero.left + hero.size > width) {
+                hero.changeDirection()
+            }
+        } else if (hero.direction === "down") {
+            hero.moveDown();
+            if (hero.top + hero.size > height) {
+                hero.changeDirection()
+            }
+        } else if (hero.direction === "left") {
+            hero.moveLeft();
+            if (hero.left < 0) {
+                hero.changeDirection()
+            }
+        } else if (hero.direction === "up") {
+            hero.moveUp();
+            if (hero.top < 0) {
+                hero.changeDirection()
+            }
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 1)
+    }
+
+    start();
+
+
+</script>
+</body>
+
+</html>
