@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  class ElectricLamp {
+    constructor(status) {
+      this.status = status;
+    }
+
+    turnOn() {
+      this.status = true;
+    }
+
+    turnOff() {
+      this.status = false;
+    }
+  }
+
+  class SwitchButton {
+    constructor(status, lamp) {
+      this.status = status;
+      this.lamp = lamp;
+
+    }
+
+
+    connectToLamp(newLamp) {
+      return this.lamp = newLamp;
+    }
+
+    switchOff() {
+      if (this.lamp != null) {
+        this.status = false;
+        this.lamp.turnOff();
+      } else {
+        console.log("Chưa lắp bóng đèn.")
+      }
+
+    }
+
+    switchOn() {
+      if (this.lamp !== null) {
+        this.status = true;
+        this.lamp.turnOn();
+      } else {
+        console.log("Chưa lắp bóng đèn.")
+      }
+
+    }
+  }
+
+  let electricLamp1 = new ElectricLamp(false);
+  let switchButton1 = new SwitchButton(false, electricLamp1);
+
+
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+  switchButton1.switchOn()
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+  switchButton1.switchOff()
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+  switchButton1.switchOn()
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+  switchButton1.switchOff()
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+  switchButton1.switchOn()
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+  switchButton1.switchOff()
+  console.log("status Lamp", switchButton1.status);
+  console.log("status button", electricLamp1.status);
+
+</script>
+</body>
+</html>

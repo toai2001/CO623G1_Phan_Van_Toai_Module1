@@ -6,17 +6,120 @@
 </head>
 <body>
 <script>
-    class Apple{
+    class Apple {
         constructor(weight) {
-            this.getweight=10;
+            this.weight = weight;
         }
-        getWeight(){
-            return this.getweight;
+
+        getWeight() {
+            return this.weight;
         }
-        setWeight(){
-            this.getweight=wei
-        }inh
+
+        setWeight(weight) {
+            this.weight = weight;
+        };
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decreaseApple() {
+            if (this.isEmpty()) {
+                alert("Táo đã hết rồi");
+            } else {
+                this.weight--;
+            }
+        }
     }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        isMale() {
+            if (this.gender == 1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getGender() {
+            if (this.isMale()) {
+                return "Male";
+            } else {
+                return "Female";
+            }
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        say(string) {
+            console.log(string);
+        }
+
+        checkApple(apple) {
+            return apple.isEmpty();
+        }
+
+        eat(apple) {
+            if (apple.getWeight() > 0) {
+                apple.decreaseApple();
+                this.weight++;
+            } else {
+                alert("Táo đã hết");
+            }
+        }
+
+        getInfo(human) {
+            console.log(human.name + " " + human.weight + " " + human.getGender());
+        }
+    }
+
+    let adam = new Human("Adam", 1, 60);
+    let eva = new Human("Eva", 2, 45);
+    let apple1 = new Apple(2);
+    console.log(adam, eva)
+    console.log(apple1)
+    adam.getInfo(adam);
+    eva.getInfo(eva)
+    adam.say("Tôi  Adam");
+    eva.say("Tôi Eva");
+    apple1.isEmpty;
+    console.log("Adam ăn táo");
+    adam.eat(apple1);
+    console.log(apple1);
+    console.log("Eva ăn táo");
+    eva.eat(apple1);
+    console.log(apple1);
+    console.log(" Sau khi Adam ăn táo lên  " + adam.weight);
+    console.log(" Sau khi Eva ăn táo lên " + eva.weight);
+    console.log(" Quả táo còn lại " + apple1.weight);
+
+
+
+
 </script>
 </body>
 </html>
