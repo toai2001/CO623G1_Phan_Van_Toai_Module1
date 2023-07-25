@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let salary = +prompt('Nhập số tiền lương của bạn theo 1 tháng');
+    if (salary<7000000){
+       document.write('Tiền thuế bạn phải đóng là:'+ salary*0.05+' VNĐ');
+    }else if (salary<15000000){
+        document.write('Tiền thuế bạn phải đóng là:'+salary*0.1+' VNĐ');
+    }else {
+        document.write('Tiền thuế bạn phải đóng là:' + salary*0.2+' VNĐ');
+    }
+</script>
+</body>
+</html>
