@@ -7,25 +7,21 @@
 <body>
 <script>
 
-let leight=+prompt('Nhập độ dài của mảng:');
- let number=[];
+    let leight = +prompt('Nhập độ dài của mảng:');
+    let number = [];
 
- for (let i = 0; i <leight ; i++) {
-      number[i]=+prompt('Nhập giá trị của bạn:');
- }
- let sum = 0;
-let number2=[];
+    for (let i = 0; i < leight; i++) {
+        number[i] = +prompt('Nhập giá trị của bạn:');
+    }
+    let sum = 0;
+    let number2 = [];
 
-for (let i = 0; i < number.length; i++) {
-    sum+=number[i];
-    number2.push(sum);
-}
-document.write('Các số bạn mới nhập vào là :' + number+'<br>');
-document.write('Các số mà bạn mới tạo ra từ số bạn nhập là:'+number2);
-
-
-
-
+    for (let i = 0; i < number.length; i++) {
+        sum += number[i];
+        number2.push(sum);
+    }
+    document.write('Các số bạn mới nhập vào là :' + number + '<br>');
+    document.write('Các số mà bạn mới tạo ra từ số bạn nhập là:' + number2);
 
 
 </script>

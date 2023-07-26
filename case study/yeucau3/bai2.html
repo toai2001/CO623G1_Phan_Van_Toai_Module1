@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let lei1=+prompt('Nhập độ dài của mảng 1');
+    let number1=[];
+    for (let i = 0; i < lei1; i++) {
+        number1[i]=+prompt('Nhập giá trị');
+    }
+    let lei2=+prompt('Nhập độ dài mảng 2');
+    let number2=[];
+    for (let i = 0; i < lei2; i++) {
+        number2[i]=+prompt('Nhập giá trị');
+    }
+    debugger
+    let number3=[];
+    for (let i = 0; i < lei2; i++) {
+        if (!number1.includes(number2[i])){
+            number3.push(number2[i]);
+        }
+    }
+    document.write('Các phân tử của mảng thứ nhất bạn nhập: ' +  number1+'<br>');
+    document.write('Các phân tử của mảng thứ hai bạn nhập: ' + number2+'<br>');
+    document.write('Phần tử mà mảng 2 có mảng 1 không có: '+number3);
+</script>
 </body>
 </html>

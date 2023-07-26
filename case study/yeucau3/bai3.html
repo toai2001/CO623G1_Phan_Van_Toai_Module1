@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [5, 2, 5, 6, 8, 1];
+    let arr2 = [6, 3, 4, 5, 7, 4];
+    let max=arr1[0]/arr2[0];
+    let index;
+    for (let i = 0; i < arr1.length; i++) {
+        if ((arr1[i]/arr2[i])>max){
+            max=arr1[i]/arr2[i];
+            index=i;
+        }
+
+    }
+   document.write('Phân tử =' +'[ '+ arr1+' ]'+'<br>');
+   document.write('Mẫu tử  =' +'[ '+arr2+' ]'+'<br>');
+    document.write('Phân số lớn nhất: '+ arr1[index]+'/'+arr2[index]+ '<br>'+ ' Nằm ở vị trí thứ:' + index);
+
+
+</script>
+</body>
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+<h2 style="
+    text-align: center;
+">
+  <details>
+    <summary>Menu quán nước</summary>
+    <p>1. Cafe: 50000đ</p>
+    <p>2. Cam vắt:60000đ </p>
+    <p>3. Nước ép cà rốt: 55000đ</p>
+    <p>4.Nước ép cà chua: 55000đ</p>
+    <p>5.Nước lọc: 15000đ</p>
+    <p>6.Nước dừa: 75000đ</p>
+    <p>Nhấn số 7 để không mua</p>
+    <button onclick="oder()"> Mua nước </button>
+  </details>
+  <script>
+    function oder() {
+      let numoder = [1, 2, 3, 4, 5, 6];
+      let money = [50000, 60000, 55000, 55000, 15000, 75000,];
+      let quantity = 0;
+      let drink;
+      let sum = 0
+      do {
+        let drink=+prompt('Nhập số để oder nước');
+        for (let i = 0; i < numoder.length; i++) {
+          if (drink === numoder[i]) {
+            quantity = +prompt('Bạn muốn mua bao nhiêu ly?');
+            sum = quantity * money[i];
+            alert('Tổng tiền bạn cần thanh toán là:' + sum + ' VNĐ');
+          }
+
+        }
+        if (drink === 7) {
+          alert('Bạn không muốn gọi nước?');
+          break;
+        }
+      } while (true);
+    }
+  </script>
+</h2>
+</body>
+</html>
