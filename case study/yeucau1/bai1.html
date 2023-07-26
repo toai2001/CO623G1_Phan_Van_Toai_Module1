@@ -7,12 +7,16 @@
 <body>
 <script>
     let salary = +prompt('Nhập số tiền lương của bạn theo 1 tháng');
+    let netSalary  =0;
     if (salary<7000000){
-       document.write('Tiền thuế bạn phải đóng là:'+ salary*0.05+' VNĐ');
+        netSalary=salary-salary*0.05;
+       document.write('Tiền lương bạn nhận được là:'+netSalary + ' VNĐ');
     }else if (salary<15000000){
-        document.write('Tiền thuế bạn phải đóng là:'+salary*0.1+' VNĐ');
+        netSalary=salary-salary*0.01;
+        document.write('Tiền lương bạn nhận được là:'+netSalary+' VNĐ');
     }else {
-        document.write('Tiền thuế bạn phải đóng là:' + salary*0.2+' VNĐ');
+        netSalary=salary-salary*0.2;
+        document.write('Tiền lương bạn nhận được là:' + netSalary+' VNĐ');
     }
 </script>
 </body>

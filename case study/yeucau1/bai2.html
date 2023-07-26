@@ -6,12 +6,15 @@
 </head>
 <body>
 <script>
-  let kitu=prompt('Nhập kí tự bạn muốn kiểm tra:'+'(không viết hoa)');
-  if (kitu ==='o' || kitu ==='u' ||kitu ==='a' ||kitu ==='i' ||kitu ==='e'){
+    do {
+        let kitu=prompt('Nhập kí tự bạn muốn kiểm tra:');
+  if (kitu ==='o' || kitu ==='u' ||kitu ==='a' ||kitu ==='i' ||kitu ==='e' ||kitu ==='O' || kitu ==='U' ||kitu ==='A' ||kitu ==='I' ||kitu ==='E'  ){
     alert('Kí tự bạn nhập vào là nguyên âm');
+    break;
   }else {
     alert('Kí tự bạn nhập vào không phải là nguyên âm');
   }
+    }while (true)
 </script>
 </body>
 </html>
