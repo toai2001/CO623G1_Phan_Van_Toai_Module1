@@ -5,6 +5,41 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let str = prompt("Nhập vào: ");
+
+    function chuyendoi() {
+        debugger
+        let upper = str.toUpperCase();
+        let lower = str.toLowerCase();
+        let str1 = upper[0];
+        for (let i = 1; i < str.length; i++) {
+            if (str[i - 1] === " ") {
+                if (str[1] !== " ") {
+                    str1 += upper[i];
+                } else {
+                    str1 += "";
+                }
+            } else {
+                str1 += lower[i];
+            }
+        }
+
+        let arr = str1.split(" ");
+        let max = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i].length > max.length) {
+                max = arr[i];
+            }
+        }
+        document.write("Trước khi chuyển đổi: " + str + "<br/>");
+        document.write("Sau khi chuyển đổi: " + str1 + "<br/>");
+        document.write("Chữ dài nhất: " + max);
+
+    }
+
+    chuyendoi(str);
+</script>
 
 </body>
 </html>
