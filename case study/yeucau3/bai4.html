@@ -28,6 +28,8 @@
       let quantity = 0;
       let drink;
       let sum = 0
+      let sum1=0
+
       do {
         let drink=+prompt('Nhập số để oder nước');
         for (let i = 0; i < numoder.length; i++) {
@@ -35,6 +37,8 @@
             quantity = +prompt('Bạn muốn mua bao nhiêu ly?');
             sum = quantity * money[i];
             alert('Tổng tiền bạn cần thanh toán là:' + sum + ' VNĐ');
+            sum1 +=sum;
+            alert('Tổng bill ' + sum1);
           }
 
         }
