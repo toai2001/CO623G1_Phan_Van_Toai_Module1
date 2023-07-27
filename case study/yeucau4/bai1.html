@@ -12,10 +12,10 @@
         debugger
         let upper = str.toUpperCase();
         let lower = str.toLowerCase();
-        let str1 = upper[0];
+        let str1 = upper[0].trim();
         for (let i = 1; i < str.length; i++) {
             if (str[i - 1] === " ") {
-                if (str[1] !== " ") {
+                    if (str[i] !== " ") {
                     str1 += upper[i];
                 } else {
                     str1 += "";

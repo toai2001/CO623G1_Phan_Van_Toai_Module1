@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let s=prompt('Nhập vào 1 câu hoặc từ');
+  let arr = s.split("");
+  console.log(arr)
+  let arr0=arr.sort();
+  // document.write(arr0);
+  let arr1=[];
+  let count=0;
+  for (let i = 0; i < arr0.length; i++) {
+    if (arr0[i]!==arr0[i+1]) {
+      arr1.push(arr0[i]);
+      count++;
+    }
+  }
+  document.write("Có các kí tự trùng nhau là: " +count+'<br>'+ ' Các kí tự trùng là: ' + arr1);
+</script>
+
+</body>
+</html>
