@@ -5,6 +5,38 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let row;
+    let molecule;
+    do {
+        row = +prompt('Nhập số nguyên có hàng là m');
+        molecule = +prompt('Nhập số nguyên có mỗi phân tử là n');
+        if (isNaN(row)===false && isNaN(molecule)===false && row>0&&molecule>0){
+            break;
+        }else{
+            alert('Vui lòng nhập lại')
+        }
+
+    }while (true)
+    let number = [];
+    let sum=0;
+    let evan="";
+    for (let i = 0; i < row; i++) {
+        number[i]=[];
+        for (let j = 0; j < molecule; j++) {
+            number[i][j] = +prompt("Nhập các phân tử");
+            if (number[i][j]%2===0){
+            sum+=number[i][j];
+            evan += number[i][j]+",";
+            }
+        }
+    }
+    document.write('Mảng được thêm m*n được thêm vào là:' + number+"<br>")
+    document.write('Các số chãn được thêm vào là:'+ evan+"<br>")
+    document.write('Tổng các chẵn được thêm vào là :' +sum)
+
+
+</script>
 
 </body>
 </html>
