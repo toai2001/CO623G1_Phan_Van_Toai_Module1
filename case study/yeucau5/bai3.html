@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let row;
+  let molecule;
+  do {
+    row = +prompt('Nhập số nguyên có hàng là m');
+    molecule = +prompt('Nhập số nguyên có mỗi phân tử là n');
+    if (isNaN(row)===false && isNaN(molecule)===false && row>0&&molecule>0){
+      break;
+    }else{
+      alert('Vui lòng nhập lại')
+    }
+
+  }while (true)
+  let newArray=[];
+  for (let i = 0; i < row; i++) {
+    newArray[i] = [];
+    for (let j = 0; j < molecule; j++) {
+      newArray[i][j] = +prompt("Nhập các phần tử");
+    }
+  }
+
+      let min = newArray[0][0];
+      let max = newArray[0][0];
+      for (let i = 0; i < newArray.length; i++) {
+        for (let j = 0; j < newArray[i].length; j++) {
+          if (max < newArray[i][j]) {
+            max = newArray[i][j];
+          } else if (min > newArray[i][j]) {
+            min = newArray[i][j];
+          }
+        }
+      }
+      console.log("Mảng được thêm vào là: " + newArray);
+      console.log("Giá trị lớn nhất là: " + max);
+      console.log("Giá trị nhỏ nhất là: " + min);
+
+</script>
+
+</body>
+</html>
