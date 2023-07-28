@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Danh sách học viên</h2>
+<div id="display"></div>
+<br>
+<button onclick="addStudent()">Thêm học viên </button>
+<button onclick="editStudent()">Sửa thông tin học viên</button>
+<button onclick="deleteStudent()">Xóa học viên</button>
+<script>
+    class Student {
+        constructor(id, name, grade,email,birthDay){
+            this.id=id;
+            this.name=name;
+            this.grade=grade;
+            this.email=email;
+            this.birthDay=birthDay;
+        }
+    }
+    let student1=new Student("001","Nguyễn Văn A","C0623G1","a@gmail.com","01/02/2001");
+    let student2=new Student("002","Nguyễn Văn B","C0623G1","b@gmail.com","01/02/2001");
+    let student3=new Student("003","Nguyễn Văn C","C0623G1","c@gmail.com","01/02/2001");
+    let student=[student3,student2,student1];
+    display(student);
+
+    function display(arr){
+        let table="<table border='1' style='border-collapse: collapse'>"+
+            "<tr>" +
+            "<th>Mã học viên</th>" +
+            "<th>Tên</th>" +
+            "<th>Lớp</th>" +
+            "<th>email</th>" +
+            "<th>Ngày sinh</th>"+
+            "</tr>";
+        for (let i = 0; i < arr.length; i++) {
+            table += "<tr>" +
+                "<td>" + arr[i].id + "</td>" +
+                "<td>" + arr[i].name + "</td>" +
+                "<td>" + arr[i].grade + "</td>" +
+                "<td>" + arr[i].email + "</td>" +
+                "<td>" + arr[i].birthDay + "</td>" +
+                "</tr>"
+        }
+        table+="</table>"
+        console.log(table)
+        document.getElementById("display").innerHTML=table;
+    }
+    function addStudent(){
+        let newId=prompt("Nhập mã học viên:");
+        let newName=prompt("Nhập tên học viên:");
+        let newGrade=prompt("Nhập lớp:");
+        let newEmail=prompt("Nhập email:");
+        let newBirthday=prompt("Nhập ngày sinh:");
+        let newStudent = new Student(newId, newName, newGrade, newEmail, newBirthday)
+        let randomNumber= Math.floor(Math.random() * 10000);
+        code = 'HV-' + randomNumber.toString().padStart(4, '0');
+        student.unshift(newStudent);
+        display(student);
+    }
+
+    function editStudent(){
+        let idStudent=prompt("Nhập mã học viên cần sửa thông tin:");
+        let count=0;
+        for (let i=0;i<student.length;i++){
+            if (idStudent===student[i].id){
+                student[i].name=prompt("Nhập lại tên học viên:");
+                student[i].grade=prompt("Nhập lại tên lớp học viên:");
+                student[i].email=prompt("Nhập lại email học viên:");
+                student[i].birthDay=prompt("Nhập lại ngày sinh học viên:");
+                count++;
+            }
+        }
+        if(count===0){
+            alert("Mã học viên không tồn tại");
+        }
+        display(student);
+    }
+
+    function deleteStudent(){
+        let idStudent=prompt("Nhập mã học viên cần xóa thông tin:");
+        let count=0;
+        for (let i=0; i<student.length;i++){
+            if (idStudent === student[i].id){
+                student.splice(i,1);
+                count++;
+            }
+        }
+        if(count===0){
+            alert("Mã học viên không tồn tại");
+        }
+        display(student);
+    }
+</script>
+</body>
+</html>
